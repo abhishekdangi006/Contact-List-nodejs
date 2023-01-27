@@ -1,0 +1,16 @@
+{
+  "name": "firstexpressserver",
+  "version": "1.0.0",
+  "description": "This is My first express server and i am learning express framework from it",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Thakur sahab",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "mongoose": "^6.8.4"
+  }
+}

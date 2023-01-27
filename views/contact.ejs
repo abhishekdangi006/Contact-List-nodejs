@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%=title%></title>
+    <script src="https://kit.fontawesome.com/a079ce796e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="/css/contact.css"> 
+</head>
+<body>
+    
+    <h1 id="main-heading">
+        <i class="fa-duotone fa-address-book"></i>
+        Contact List</h1>
+    <ul id="contact-list">
+        <%for(i of contact_list){%>
+        <li>
+            <p><%=i.name%></p>
+            <p><%=i.phone%></p>
+        
+        <div id="delete-contact">
+            <a href="/delete-contact/<%=i.id%>">
+                <h2>Delete</h2>
+            </a>
+        </div>
+    </li>
+        <%}%>
+    </ul>
+    <div id="add-contact">
+        <form action="/create-contact" method="post">
+            <input type="text" name="name" placeholder="Enter Name" required>
+            <input type="number" name="phone" placeholder="Enter Contact" required>
+            <button type="submit">Add</button>
+        </form>
+    </div>
+    
+</body>
+</html>
